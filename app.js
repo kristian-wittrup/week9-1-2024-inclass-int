@@ -6,12 +6,87 @@
 // })
 
 
+const products = [
+  {
+    title: 'Product 1',
+    description: 'Description for Product 1',
+    image: 'https://picsum.photos/200/150',
+    price: 19.99,
+    category: 'Electronics'
+  },
+  {
+    title: 'Product 2',
+    description: 'Description for Product 2',
+    image: 'https://picsum.photos/200/150',
+    price: 9.99,
+    category: 'Shoes'
+  },
+  {
+    title: 'Product 3',
+    description: 'Description for Product 3',
+    image: 'https://picsum.photos/200/150',
+    price: 29.99,
+    category: 'Electronics'
+  },
+  {
+    title: 'Product 1',
+    description: 'Description for Product 1',
+    image: 'https://picsum.photos/200/150',
+    price: 19.99,
+    category: 'Electronics'
+  },
+  {
+    title: 'Product 2',
+    description: 'Description for Product 2',
+    image: 'https://picsum.photos/200/150',
+    price: 9.99,
+    category: 'Shoes'
+  },
+  {
+    title: 'Product 3',
+    description: 'Description for Product 3',
+    image: 'https://picsum.photos/200/150',
+    price: 29.99,
+    category: 'Electronics'
+  }
+];
 
+// products.forEach(product => {
+// console.log(`Title: ${product.title} | Price: ${product.price}`);
+// })
 
+const filteredProducts = products.filter(product => product.category == "Shoes")
+console.log(filteredProducts);
 
+// Create a .card with title, description, image, price, and category
+const createCard = product => {
+  return `
+    <div class="card">
+      <h4>${product.title}</h4>
+      <h2>${product.description}</h2>
+      <img src="${product.image}" />
+      <p>Price: ${product.price}</p>
+      <p>Category: ${product.category}</p>
+    </div>
+  `;
+}
 
+// Print out the card for each product using template strings
+products.forEach(product => {
+  console.log(createCard(product));
+})
 
+// productContainer is the element where the product cards will be inserted
+const productContainer = document.querySelector(".row")
 
+// Insert the generated HTML for each product card into the document
+// products.forEach(product => {
+//   productContainer.innerHTML += createCard(product);
+// })
+
+filteredProducts.forEach(product => {
+  productContainer.innerHTML += createCard(product);
+})
 
 
 
