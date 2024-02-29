@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Cards</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+  <style>
+    svg { 
+ /*      width: 100px;
+      height: 100px; 
+      margin: -3px;
+       */
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
     <!-- Product Cards -->
-    <div class="row">
-      <!-- Product Cards will be dynamically inserted here -->
+     <div class="row">
+       <!-- Product Cards will be dynamically inserted here -->
     </div>
   </div>
 
+
+  <!--  TEXT drop  -->
+  
+<!--   <div class="container" style="display: flex; gap:10px;">
+    <div class="text">1</div>
+    <div class="text">2</div>
+    <div class="text">3</div>
+    <div class="text">4</div>
+    <div class="text">5</div>
+
+  </div> -->
+
+  
+  <!-- Cloud Draw -->
+  <!-- <svg viewBox="0 0 340 333">
+    <path class="path" fill="transparent" stroke="black" stroke-width="4" d="M66.039,133.545c0,0-21-57,18-67s49-4,65,8
+    s30,41,53,27s66,4,58,32s-5,44,18,57s22,46,0,45s-54-40-68-16s-40,88-83,48s11-61-11-80s-79-7-70-41
+    C46.039,146.545,53.039,128.545,66.039,133.545z"/>
+  </svg> -->
+
+
+
+
+
+  <!-- LETTER DRAW && COLOR+FILL  -->
+  <!-- https://fontawesomeicons.com/svg/icons/letter-r -->
+<!-- 
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-k" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path" stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <line class="path" x1="7" y1="4" x2="7" y2="20" />
+    <path class="path" d="M7 12h2l8 -8" />
+    <line class="path" x1="9" y1="12" x2="17" y2="20" />
+  </svg>
+
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-r" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path" stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path class="path" d="M7 20v-16h5.5a4 4 0 0 1 0 9h-5.5" />
+    <line class="path" x1="12" y1="13" x2="17" y2="20" />
+  </svg>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-i" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path"  stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <line class="path"  x1="12" y1="4" x2="12" y2="20" />
+  </svg>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-s" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path"  stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path class="path"  d="M17 8a4 4 0 0 0 -4 -4h-2a4 4 0 0 0 0 8h2a4 4 0 0 1 0 8h-2a4 4 0 0 1 -4 -4" />
+  </svg>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-t" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path"  stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <line class="path"  x1="6" y1="4" x2="18" y2="4" />
+    <line class="path"  x1="12" y1="4" x2="12" y2="20" />
+  </svg>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-i" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path"  stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <line class="path"  x1="12" y1="4" x2="12" y2="20" />
+  </svg>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-a" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path  class="path" stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path  class="path" d="M7 20v-12a4 4 0 0 1 4 -4h2a4 4 0 0 1 4 4v12" />
+    <line  class="path" x1="7" y1="13" x2="17" y2="13" />
+  </svg>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-n" width="24" height="24"
+    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path class="path"  stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path class="path"  d="M7 20v-16l10 16v-16" />
+  </svg> -->
+
+
   <script src="app.js"></script>
 </body>
+
 </html>
